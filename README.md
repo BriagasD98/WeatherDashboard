@@ -18,10 +18,17 @@ tell users what day the weather is for.
 
 To use the application, please click to the following link: <br/>
 **https://briagasd98.github.io/WeatherDashboard/**
-
 <br/>
 Once the application is open, simply enter a city into the search bar and click the magnifying glass to submit the search request. Weather information for
 your requested city will then be rendered onto the page!
+<br/>
+
+![Screenshot (82)](https://user-images.githubusercontent.com/83102464/135892260-42fb5ed1-8154-4a54-ba6f-99cec4d8dae6.png)
+<br/>
+
+![Screenshot (83)](https://user-images.githubusercontent.com/83102464/135892298-341f3fcc-fad3-49fe-8f8a-abcc522a4f6c.png)
+
+
 
 ## License
 
