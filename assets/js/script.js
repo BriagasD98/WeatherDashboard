@@ -71,6 +71,12 @@ var handleResponse = function(data) {
         forecastTemp2.textContent = 'Temp: ' + data.daily[2].temp.day + ' °F';
         forecastWind2.textContent = 'Wind: ' + data.daily[2].wind_speed + ' mph';
         forecastHumidity2.textContent = 'Humidity: ' + data.daily[2].humidity + ' %';
+
+        // WeatherCard 3
+        forecastDate3.textContent = new Date(data.daily[3].dt * 1000).toLocaleDateString('en-US');
+        forecastTemp3.textContent = 'Temp: ' + data.daily[3].temp.day + ' °F';
+        forecastWind3.textContent = 'Wind: ' + data.daily[3].wind_speed + ' mph';
+        forecastHumidity3.textContent = 'Humidity: ' + data.daily[3].humidity + ' %';
     }
 }
 
