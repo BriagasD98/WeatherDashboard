@@ -51,10 +51,10 @@ var searchCities = document.querySelector('#city-input');
 var handleResponse = function(data) {
     // displays current weather information in main content card
     currentDate.textContent = new Date(data.current.dt * 1000).toLocaleDateString('en-US');
-    currentTemp.textContent = data.current.temp + '°F';
-    currentWind.textContent = data.current.wind_speed + ' mph';
-    currentHumidity.textContent = data.current.humidity + '%';
-    currentUV.textContent = data.current.uvi;
+    currentTemp.textContent = 'Temp: ' + data.current.temp + '°F';
+    currentWind.textContent = 'Wind: ' + data.current.wind_speed + ' mph';
+    currentHumidity.textContent = 'Humidity: ' + data.current.humidity + '%';
+    currentUV.textContent = 'UV: ' + data.current.uvi;
 
     for(i=0;i<5;i++){
         handle5Day(data.daily[i]);
