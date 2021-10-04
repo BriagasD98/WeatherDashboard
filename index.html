@@ -19,106 +19,108 @@
         </div>
     </header>
     <!-- Search Container -->
-    <div class="container-fluid mt-2">
-        <div class="row">
-            <div class="col-md-3 pl-2">
-                <div class="card" id="searchCard" style="width: 24rem;">
-                    <div class="card-body">
-                        <h2>Search For A City: </h2>  
-                        <form id="city-form" class="form-inline">
-                            <div class="form-group">
-                                <input type="text" placeholder="Katy" class="form-control" id="city-input">
-                            </div>
-                            <button id="searchBtn" class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div>
-                        <h4 class="pt-2 pb-2">Your Previously Searched Cities: </h4>
-                    </div>
-                </div>
-                <div id="city-history">
-                    <div id="city-list" class="list-group">
-                        <!-- displays search history from local storage -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Weather Cards -->
-            <div class="container-fluid col-md-9">
-                <div id="current-weather" class="card">
-                    <div class="card-body">
-                        <div id="city-date-icon">
-                            <h2 id="cityName"></h2>
-                            </span>
-                            <span id="currentIcon"></span>
-                        </div>
-                        <h2 class="card-text" id="currentDate"></h2>
-                        <p class="card-text" id="currentTemp"></p>
-                        <p class="card-text" id="currentWind"></p>
-                        <p class="card-text" id="currentHumidity"></p>
-                        <p class="card-text" id="currentUV"></p>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Weather Card Information -->
+    <div class="background">
+        <div class="container-fluid mt-2">
             <div class="row">
-                <div id="forecast-weather" class="m-2 col-md-11">
-                    <h4>5-Day Forecast: </h4>
-                    <div id="forecast-cards">
-                        <div class="card m-2 forecast">
-                            <div id="forecast1" class="card-body">
-                                <h2 class="card-title" id="forecastDate1"></h2>
-                                </span>
-                                <span id="forecast-icon1"></span>
-                                <p class="card-text" id="forecastTemp1"></p>
-                                <p class="card-text" id="forecastWind1"></p>
-                                <p class="card-text" id="forecastHumidity1"></p>
-                            </div>
+                <div class="col-md-3 pl-2">
+                    <div class="card" id="searchCard" style="width: 24rem;">
+                        <div class="card-body">
+                            <h2>Search For A City: </h2>  
+                            <form id="city-form" class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Katy" class="form-control" id="city-input">
+                                </div>
+                                <button id="searchBtn" class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+                            </form>
                         </div>
-                        <div class="card m-2 forecast">
-                            <div id="forecast2" class="card-body">
-                                <h2 class="card-title" id="forecastDate2"></h2>
-                                </span>
-                                <span id="forecast-icon2"></span>
-                                <p class="card-text" id="forecastTemp2"></p>
-                                <p class="card-text" id="forecastWind2"></p>
-                                <p class="card-text" id="forecastHumidity2"></p>
-                            </div>
+                        <div>
+                            <h4 class="pt-2 pb-2">Your Previously Searched Cities: </h4>
                         </div>
-                        <div class="card m-2 forecast">
-                            <div id="forecast3" class="card-body">
-                                <h2 class="card-title" id="forecastDate3"></h2>
-                                </span>
-                                <span id="forecast-icon3"></span>
-                                <p class="card-text" id="forecastTemp3"></p>
-                                <p class="card-text" id="forecastWind3"></p>
-                                <p class="card-text" id="forecastHumidity3"></p>
-                            </div>
+                    </div>
+                    <div id="city-history">
+                        <div id="city-list" class="list-group">
+                            <!-- displays search history from local storage -->
                         </div>
-                        <div class="card m-2 forecast">
-                            <div id="forecast4" class="card-body">
-                                <h2 class="card-title" id="forecastDate4"></h2>
+                    </div>
+                </div>
+
+                <!-- Weather Cards -->
+                <div class="container-fluid col-md-9">
+                    <div id="current-weather" class="card">
+                        <div class="card-body">
+                            <div id="city-date-icon">
+                                <h2 id="cityName"></h2>
                                 </span>
-                                <span id="forecast-icon4"></span>
-                                <p class="card-text" id="forecastTemp4"></p>
-                                <p class="card-text" id="forecastWind4"></p>
-                                <p class="card-text" id="forecastHumidity4"></p>
+                                <span id="currentIcon"></span>
                             </div>
+                            <h2 class="card-text" id="currentDate"></h2>
+                            <p class="card-text" id="currentTemp"></p>
+                            <p class="card-text" id="currentWind"></p>
+                            <p class="card-text" id="currentHumidity"></p>
+                            <p class="card-text" id="currentUV"></p>
+                            </ul>
                         </div>
-                        <div class="card m-2 forecast">
-                            <div id="forecast5" class="card-body">
-                                <h2 class="card-title" id="forecastDate5"></h2>
-                                </span>
-                                <span id="forecast-icon5"></span>
-                                <p class="card-text" id="forecastTemp5"></p>
-                                <p class="card-text" id="forecastWind5"></p>
-                                <p class="card-text" id="forecastHumidity5"></p>
+                    </div>
+
+                    <!-- Weather Card Information -->
+                <div class="row">
+                    <div id="forecast-weather" class="m-2 col-md-11">
+                        <h4>5-Day Forecast: </h4>
+                        <div id="forecast-cards">
+                            <div class="card m-2 forecast">
+                                <div id="forecast1" class="card-body">
+                                    <h2 class="card-title" id="forecastDate1"></h2>
+                                    </span>
+                                    <span id="forecast-icon1"></span>
+                                    <p class="card-text" id="forecastTemp1"></p>
+                                    <p class="card-text" id="forecastWind1"></p>
+                                    <p class="card-text" id="forecastHumidity1"></p>
+                                </div>
+                            </div>
+                            <div class="card m-2 forecast">
+                                <div id="forecast2" class="card-body">
+                                    <h2 class="card-title" id="forecastDate2"></h2>
+                                    </span>
+                                    <span id="forecast-icon2"></span>
+                                    <p class="card-text" id="forecastTemp2"></p>
+                                    <p class="card-text" id="forecastWind2"></p>
+                                    <p class="card-text" id="forecastHumidity2"></p>
+                                </div>
+                            </div>
+                            <div class="card m-2 forecast">
+                                <div id="forecast3" class="card-body">
+                                    <h2 class="card-title" id="forecastDate3"></h2>
+                                    </span>
+                                    <span id="forecast-icon3"></span>
+                                    <p class="card-text" id="forecastTemp3"></p>
+                                    <p class="card-text" id="forecastWind3"></p>
+                                    <p class="card-text" id="forecastHumidity3"></p>
+                                </div>
+                            </div>
+                            <div class="card m-2 forecast">
+                                <div id="forecast4" class="card-body">
+                                    <h2 class="card-title" id="forecastDate4"></h2>
+                                    </span>
+                                    <span id="forecast-icon4"></span>
+                                    <p class="card-text" id="forecastTemp4"></p>
+                                    <p class="card-text" id="forecastWind4"></p>
+                                    <p class="card-text" id="forecastHumidity4"></p>
+                                </div>
+                            </div>
+                            <div class="card m-2 forecast">
+                                <div id="forecast5" class="card-body">
+                                    <h2 class="card-title" id="forecastDate5"></h2>
+                                    </span>
+                                    <span id="forecast-icon5"></span>
+                                    <p class="card-text" id="forecastTemp5"></p>
+                                    <p class="card-text" id="forecastWind5"></p>
+                                    <p class="card-text" id="forecastHumidity5"></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
             </div>
         </div>
     </div>
