@@ -25,18 +25,11 @@ var weatherText = document.querySelector("#weatherText");
 var iconEl = document.querySelector("#icon");
 
 // Current Weather card
-var currentTemp = document.querySelector('#currentTemp');
-
-
-var saveCities = function(){
-    localStorage.setItem("cities", JSON.stringify(storageCities));
-}
-
 var loadCities = function(){
     var savedCities = localStorage.getItem("cities");
 
     if (!savedCities) {
-        storageCities=[];
+        savedCities=[];
         return false;
     };
 
@@ -47,11 +40,21 @@ var loadCities = function(){
     }; 
 };
 
+// Saves searches to local storage
+var saveCities = function(cities){
+    localStorage.setItem("savedCities", JSON.stringify(savedCities));
+}
+
 var searchButton = document.querySelector('#searchBtn');
 var searchCities = document.querySelector('#city-input');
 
 var handleResponse = function(data) {
-    currentTemp.textContent = data.current.temp;
+    // displays current weather information in main content card
+    currentDate.textContent = new Date(data.current.dt * 1000).toLocaleDateString('en-US');
+    currentTemp.textContent = data.current.temp + '°F';
+    currentWind.textContent = data.current.wind_speed + ' mph';
+    currentHumidity.textContent = data.current.humidity + '%';
+    currentUV.textContent = data.current.uvi;
 
     for(i=0;i<5;i++){
         handle5Day(data.daily[i]);
@@ -62,6 +65,7 @@ var handle5Day = function(data) {
     console.log(data)
 }
 
+// function to get lon/lat for location based weather data
 var getWeather = function(e) {
     var city = searchCities.value
     e.preventDefault();
