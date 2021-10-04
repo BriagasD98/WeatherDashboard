@@ -53,11 +53,15 @@ var handleResponse = function(data) {
     currentDate.textContent = new Date(data.current.dt * 1000).toLocaleDateString('en-US');
     currentTemp.textContent = 'Temp: ' + data.current.temp + '°F';
     currentWind.textContent = 'Wind: ' + data.current.wind_speed + ' mph';
-    currentHumidity.textContent = 'Humidity: ' + data.current.humidity + '%';
+    currentHumidity.textContent = 'Humidity: ' + data.current.humidity + ' %';
     currentUV.textContent = 'UV: ' + data.current.uvi;
 
     for(i=0;i<5;i++){
         handle5Day(data.daily[i]);
+
+        forecastTemp1.textContent = 'Temp: ' + data.daily[1].temp.day + ' °F';
+        forecastWind1.textContent = 'Wind: ' + data.daily[1].wind_speed + ' mph';
+        forecastHumidity1.textContent = 'Humidity: ' + data.daily[1].humidity + ' %';
     }
 }
 
