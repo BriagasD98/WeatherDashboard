@@ -43,6 +43,7 @@ var loadCities = function(){
 // Saves searches to local storage
 var saveCities = function(){
     var input = document.getElementById('city-input');
+
     localStorage.setItem("savedCities", JSON.stringify(input.value));
 }
 
