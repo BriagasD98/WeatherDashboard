@@ -17,6 +17,7 @@ tell users what day the weather is for.
 ## Usage
 
 To use the application, please click to the following link: <br/>
+**https://briagasd98.github.io/WeatherDashboard/**
 
 <br/>
 Once the application is open, simply enter a city into the search bar and click the magnifying glass to submit the search request. Weather information for
