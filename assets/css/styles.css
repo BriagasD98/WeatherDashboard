@@ -1,4 +1,9 @@
 /* Check back later for styling! */
+header a {
+    display: flex;
+    justify-content: center;
+}
+
 #forecast-cards {
     display: flex;
     justify-content: space-between;

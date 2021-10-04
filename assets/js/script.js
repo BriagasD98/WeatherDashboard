@@ -24,6 +24,7 @@ var cityName = document.querySelector("#cityName");
 var weatherText = document.querySelector("#weatherText");
 var iconEl = document.querySelector("#icon");
 
+
 // Current Weather card
 var loadCities = function(){
     var savedCities = localStorage.getItem("cities");
@@ -41,8 +42,9 @@ var loadCities = function(){
 };
 
 // Saves searches to local storage
-var saveCities = function(cities){
-    localStorage.setItem("savedCities", JSON.stringify(savedCities));
+var saveCities = function(){
+    var input = document.getElementById('city-input');
+    localStorage.setItem("savedCities", JSON.stringify(input.value));
 }
 
 var searchButton = document.querySelector('#searchBtn');
@@ -122,5 +124,9 @@ var getWeather = function(e) {
 
 searchButton.addEventListener('click', function(e) {
     getWeather(e);
+})
+
+searchButton.addEventListener('click', function(e) {
+    saveCities(e);
 })
 
