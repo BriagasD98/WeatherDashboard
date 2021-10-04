@@ -56,12 +56,21 @@ var handleResponse = function(data) {
     currentHumidity.textContent = 'Humidity: ' + data.current.humidity + ' %';
     currentUV.textContent = 'UV: ' + data.current.uvi;
 
+    // Loop through 5 days of weather after today's weather
     for(i=0;i<5;i++){
         handle5Day(data.daily[i]);
 
+        // WeatherCard 1
+        forecastDate1.textContent = new Date(data.daily[1].dt * 1000).toLocaleDateString('en-US');
         forecastTemp1.textContent = 'Temp: ' + data.daily[1].temp.day + ' °F';
         forecastWind1.textContent = 'Wind: ' + data.daily[1].wind_speed + ' mph';
         forecastHumidity1.textContent = 'Humidity: ' + data.daily[1].humidity + ' %';
+
+        // WeatherCard 2
+        forecastDate2.textContent = new Date(data.daily[2].dt * 1000).toLocaleDateString('en-US');
+        forecastTemp2.textContent = 'Temp: ' + data.daily[2].temp.day + ' °F';
+        forecastWind2.textContent = 'Wind: ' + data.daily[2].wind_speed + ' mph';
+        forecastHumidity2.textContent = 'Humidity: ' + data.daily[2].humidity + ' %';
     }
 }
 
