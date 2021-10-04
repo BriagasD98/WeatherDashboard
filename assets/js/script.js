@@ -27,7 +27,7 @@ var iconEl = document.querySelector("#icon");
 
 // Current Weather card
 var loadCities = function(){
-    var savedCities = localStorage.getItem("cities");
+    var savedCities = localStorage.getItem("savedCities");
 
     if (!savedCities) {
         savedCities=[];
@@ -36,9 +36,8 @@ var loadCities = function(){
 
     savedCities=JSON.parse(savedCities);
 
-    for(x=0;x<savedCities.length;x++){
-        addPast(savedCities[x]);
-    }; 
+    $('#city-list').empty();
+
 };
 
 // Saves searches to local storage
@@ -130,3 +129,4 @@ searchButton.addEventListener('click', function(e) {
     saveCities(e);
 })
 
+loadCities();
