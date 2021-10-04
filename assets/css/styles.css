@@ -1,1 +1,5 @@
 /* Check back later for styling! */
+#forecast-cards {
+    display: flex;
+    justify-content: space-between;
+}
